@@ -1,0 +1,23 @@
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		
+		ArrayController nums =new ArrayController();
+		nums.display("All element");
+		
+		int[] new_nums =new int[nums.getSive()-1];
+		
+		for (int i=0 ; i<new_nums.length;i++) {
+			new_nums[i] = nums.getNums()[i+1];
+		}
+		
+		
+		
+		
+		nums.setNums(new_nums);
+        nums.display("\n\nAfter deletes the First index:");
+
+	}
+
+}
