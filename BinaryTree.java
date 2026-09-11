@@ -57,4 +57,51 @@ public class BinaryTree {
 		
 	}
 	
+	
+	public void insert(int new_data) {
+		if(root==null) {
+			root=new Node(new_data);
+		}else {
+			Node current_node = root;
+			while(true) {
+				if(new_data < current_node.data) {
+					if(current_node.left==null) {
+						current_node.left=new Node(new_data);
+						break;
+					}
+					current_node = current_node.left;
+				}else {
+					if(current_node.right==null) {
+						current_node.right=new Node(new_data);
+						break;
+					}
+				    current_node = current_node.right;
+				}
+			}//end loop
+		}	
+	}
+	
+	
+	
+	public void createTree4() {
+		int[] nums = {10, 8, 15, 2, 9, 18, 14, 20, 11, 17};
+		for(int i : nums) {
+			insert(i);
+		}
+	}
+	
+	public void createTree5() {
+		int[] nums = {50,30,70,10,40,60,20,45, 55, 65,25};
+		for(int i : nums) {
+			insert(i);
+		}
+	}
+	public void createTree6() {
+		int[] nums = {40,20,70,30,55, 85, 25, 35, 80, 32};
+		for(int i : nums) {
+			insert(i); 	
+		}
+	}
+	
+	
 }
